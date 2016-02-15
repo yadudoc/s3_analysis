@@ -1,6 +1,6 @@
-AMI, region_code, region_name
-ami-d05e75b8, us-east-1, N.Virginia
-ami-9abea4fb, us-west-2, Oregon
-ami-87564feb, eu-central-1, Frankfurt
-ami-a21529cc, ap-northeast-1, Tokyo
-ami-0fb83963, sa-east-1, Sao Paulo
+ami,region_code,region_name
+ami-d05e75b8,us-east-1,N.Virginia
+ami-9abea4fb,us-west-2,Oregon
+ami-87564feb,eu-central-1,Frankfurt
+ami-a21529cc,ap-northeast-1,Tokyo
+ami-0fb83963,sa-east-1,Sao Paulo
