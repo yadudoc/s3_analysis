@@ -37,7 +37,7 @@ run_download()
 
 #rm -f $LOG
 
-for t in 1 4 16 64 256 1024
+for t in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
 do
     for repeat in $(seq 1 1 $REPEAT)
     do
@@ -47,7 +47,7 @@ do
     done
 done
 
-for t in 1 4 16 64 256 1024
+for t in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
 do
     for repeat in $(seq 1 1 $REPEAT)
     do
@@ -57,6 +57,5 @@ do
 done
 
 aws s3 cp --region us-east-1 $LOG s3://klab-s3-analysis/$instance_id/
-
-sleep 1200
+aws ec2 terminate-instances --instance-ids $instance_id
 shutdown now
