@@ -37,7 +37,7 @@ run_download()
 
 #rm -f $LOG
 
-for t in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
+for t in 4096 6144 8192 #1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
 do
     for repeat in $(seq 1 1 $REPEAT)
     do
@@ -47,7 +47,8 @@ do
     done
 done
 
-for t in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
+#for t in 1 2 4 8 16 32 64 128 256 512 1024 2048 4096 8192
+for t in 4096 6144 8192
 do
     for repeat in $(seq 1 1 $REPEAT)
     do
