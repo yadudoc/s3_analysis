@@ -269,9 +269,19 @@ if __name__ == "__main__" :
                         price_at_stamp[row[5]] = {}
                     price_at_stamp[row[5]][az] = float(row[4])
 
+            print "[PRICEDATA], tstamp, instance, ",
+            for az in az_data.keys():
+                print "{0},".format(az),
+            print
+
             for t in sorted(price_at_stamp.keys(), key=lambda x: dateutil.parser.parse(x)):
-                z = min(price_at_stamp[t], key=lambda x: price_at_stamp[t][x])
-                print "[Best_Price] Time:{0} Instance_type:{1} AZ:{2} Price:{3}".format(t, i, z, price_at_stamp[t][z])
+                print "[PRICEDATA], {0}, {1}, ".format(t, i),
+                #z = min(price_at_stamp[t], key=lambda x: price_at_stamp[t][x])
+                #print "[Best_Price] Time:{0} Instance_type:{1} AZ:{2} Price:{3}".format(t, i, z, price_at_stamp[t][z])
+                for az in az_data.keys():
+                    print "{0}, ".format(price_at_stamp[t].get(az, None)),
+                print
+
 
 
     #for instance in instance_types:
